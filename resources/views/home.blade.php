@@ -61,6 +61,7 @@
                       <option>Alicia Zermeño</option>
                       <option>Patricia Reyes</option>
                       <option>Alberto Navarro</option>
+                      <option>otra persona</option>
                     </select>
                   </div>
             </div>
