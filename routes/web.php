@@ -19,7 +19,7 @@ Route::get('template', function () {
     return view('template');
 });
 
-Route::get('tabla', function () {
-    return view('tabla');
-});
+Route::get('tabla','CorreoController@index')->name('tabla');
+
+Route::resource('Correo', 'CorreoController');
 

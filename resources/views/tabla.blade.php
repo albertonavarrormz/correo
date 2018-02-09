@@ -13,40 +13,31 @@
             <table id="example" class="table table-striped table-bordered table-hover table-bordered" cellspacing="0" width="100%">  
                 <thead>
                     <tr>
+                        <th>id</th>
                         <th>Tipo Tramite</th>
-                        <th>Remitente</th>
-                        <th>A quien va Dirigido</th>
-                        <th>Fecha Documento</th>
-                        <th>Realizo</th>
-                        <th>Prioridad</th>
                         <th>Accion</th>
-                        <th>Motivo</th>
-                        <th>Archivo</th>
+                        <th>Remitente</th>
+                        <th>Fecha de Registro</th>
+                        <th>Fecha de Recibo</th>
+                        <th>Persona</th>
+                        <th>Prioridad</th>
+                        <th>Detalles</th>
                     </tr>
                 </thead>
-                <tbody>       
+                <tbody>
+                    @foreach($correos as $correo)
                     <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td><button type="button" class="btn btn-outline-primary">Archivo</button></td>
+                        <td>{{ $correo->id }}</td>
+                        <td>{{ $correo->tipo_tramite }}</td>
+                        <td>{{ $correo->accion }}</td>
+                        <td>{{ $correo->remitente }}</td>
+                        <td>{{ Carbon\Carbon::parse($correo->fecha_registro)->format('d/m/Y') }}</td>
+                        <td>{{ Carbon\Carbon::parse($correo->fecha_recibo)->format('d/m/Y') }}</td>
+                        <td>{{ $correo->persona }}</td>
+                        <td>{{ $correo->prioridad }}</td>
+                        <td><a href="{{ route('Correo.show', $correo->id) }}" class="btn btn-lg btn-primary">Detalle</a></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td><button type="button" class="btn btn-outline-primary">Archivo</button></td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>  
@@ -54,7 +45,6 @@
     
 @endsection
 @section('scripts')
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
