@@ -49,7 +49,7 @@
             "@php artisan package:discover"
         ],
         "post-install-cmd": [
-            "chmod -R 777 bootstrap\/cache",
+            "chmod -R 755 bootstrap\/cache",
             "php artisan cache:clear"
         ]
     },
