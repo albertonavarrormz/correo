@@ -1,0 +1,64 @@
+.cont{
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+    box-sizing: content-box;
+
+}
+
+.logo{
+    display: block;
+    width: 50%;
+    max-width: 360px;
+    margin: auto;
+}
+.titulo{
+    text-align: center;
+}
+.margin-top{
+    margin-top: 100px;
+}
+
+.myestilo {
+    background-color: white;
+    color: black ;
+}
+.pdf{
+    width: 100%;
+    height: 600px;
+}
+
+.letra_rojaG{
+    color: red;
+    font-size: 30px;
+
+}
+.letra_roja{
+    color: red;
+
+}
+.letra_naranja{
+    color:rgb(196,89,17);
+    font-size: 20px;
+}
+
+.letra_azulclea{
+    color: rgb(0,176,240);
+    font-size: 20px;
+}
+
+.letra_verde{
+    color: #31B404;
+    font-weight: bold;
+}
+
+.titulo{
+    color: rgb(46,116,181);
+}
+th,td{
+   text-align: center;
+   vertical-align: center;
+   width: 250px;
+   height: 50px;
+}
+

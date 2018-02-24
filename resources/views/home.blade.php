@@ -8,7 +8,9 @@
 @section('title', 'Administracion de Correo')
 
 @section('contenido')
-
+    <nav class="navbar navbar-light bg-faded">
+      <a class="navbar-brand" href="{{ route('tabla') }}">Correo</a>
+    </nav>
     <div align="center">
         <img src="img/edificio.jpg" class="rounded" alt="Responsive image" width="600" height="400">        
     </div>
